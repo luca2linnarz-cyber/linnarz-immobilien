@@ -1,0 +1,2 @@
+export const metadata={title:'Impressum – in Vorbereitung'};
+export default function Impressum(){return <section className="section page-section prose"><h1>Impressum</h1><p>Diese Website befindet sich in Entwicklung und ist nicht zur Veröffentlichung freigegeben.</p><h2>Linnarz Immobilien</h2><p>Luca Linnarz<br/>Telefon: +49 175 1165719<br/>E-Mail: info@linnarz-immobilien.de</p><p>Geschäftsanschrift, Angaben zur Gewerbeerlaubnis, zuständige Aufsichtsbehörde und gegebenenfalls weitere Pflichtangaben müssen vor Veröffentlichung ergänzt und geprüft werden.</p></section>}

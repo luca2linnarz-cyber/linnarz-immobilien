@@ -1,0 +1,6 @@
+import {notFound} from 'next/navigation';
+import Link from 'next/link';
+import {properties} from '@/lib/properties';
+export function generateStaticParams(){return properties.map(p=>({slug:p.slug}))}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}){const {slug}=await params;return {title:properties.find(p=>p.slug===slug)?.title??'Immobilie'}}
+export default async function Property({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const p=properties.find(p=>p.slug===slug);if(!p)notFound();return <article className="section page-section"><Link href="/immobilien">← Alle Immobilien</Link><p className="eyebrow">{p.type} · Beispielangebot</p><h1>{p.title}</h1><div className="detail-grid"><img src={p.image} alt={p.title+' – Beispielabbildung'} width="900" height="460"/><div><h2 className="price">{p.price}</h2><dl><dt>Wohnfläche</dt><dd>{p.area} m²</dd><dt>Zimmer</dt><dd>{p.rooms}</dd><dt>Ausstattung / Grundstück</dt><dd>{p.extra}</dd></dl><p>{p.description}</p><p className="demo-note">Kein reales Verkaufs- oder Vermietungsangebot. Weitere Objektdaten und Energieinformationen liegen für dieses Beispiel nicht vor.</p><Link className="button" href="/kontakt">Allgemeine Beratung anfragen →</Link></div></div></article>}

@@ -1,0 +1,4 @@
+import Link from 'next/link';
+import {ArrowRight,House,BedDouble,Trees} from 'lucide-react';
+import {properties} from '@/lib/properties';
+export function PropertyCard({property:p}:{property:typeof properties[number]}){return <Link className="property-card" href={'/immobilien/'+p.slug}><div className="property-image"><img src={p.image} alt={p.title+' – Beispielabbildung'} width="450" height="230" loading="lazy"/><span className="badge">{p.type}</span><span className="demo-badge">Beispiel</span></div><div className="property-body"><h3>{p.title}</h3><strong className="price">{p.price}</strong><div className="facts"><span><House/>{p.area} m²</span><span><BedDouble/>{p.rooms} Zimmer</span><span><Trees/>{p.extra}</span><ArrowRight className="card-arrow"/></div></div></Link>}

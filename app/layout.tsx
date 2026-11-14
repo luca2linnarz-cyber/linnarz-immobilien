@@ -1,0 +1,7 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Phone } from 'lucide-react';
+import { Navigation } from '@/components/navigation';
+import './globals.css';
+export const metadata: Metadata = {title:{default:'Linnarz Immobilien | Immobilien mit Wert und Perspektive',template:'%s | Linnarz Immobilien'},description:'Ihr Immobilienmakler in Adenau, am Nürburgring und im Kreis Ahrweiler. Verkauf, Vermietung und Bewertung mit Luca Linnarz.',robots:{index:false,follow:false}};
+export default function RootLayout({children}:{children:React.ReactNode}) {return <html lang="de"><body><a className="skip-link" href="#inhalt">Zum Inhalt</a><header className="header"><div className="header-inner"><Link href="/" aria-label="Linnarz Immobilien – Startseite"><img className="logo" src="/images/logo.svg" alt="Linnarz Immobilien" width="210" height="91"/></Link><Navigation/><a className="button header-phone" href="tel:+491751165719"><Phone size={18}/> +49 175 1165719</a></div></header><main id="inhalt">{children}</main><footer><div><strong>Linnarz Immobilien</strong><p>Adenau · Nürburgring · Kreis Ahrweiler</p></div><nav aria-label="Fußnavigation"><Link href="/kontakt">Kontakt</Link><Link href="/impressum">Impressum</Link><Link href="/datenschutz">Datenschutz</Link></nav><small>Entwicklungsstand · Beispielangebote · Noch nicht veröffentlicht</small></footer></body></html>}
