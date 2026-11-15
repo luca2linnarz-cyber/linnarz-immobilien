@@ -144,3 +144,6 @@ footer .footer-legal{justify-content:flex-end;gap:20px;padding:0;align-self:cent
 footer .footer-note{grid-column:1/-1;width:auto;margin:0;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
 @media(max-width:1050px){.footer-inner{grid-template-columns:1fr auto}.footer-icons{grid-column:2;grid-row:1}footer .footer-legal{grid-column:1/-1;justify-content:flex-start}}
 @media(max-width:600px){.footer-inner{grid-template-columns:1fr;gap:24px;padding:30px 20px 22px}.footer-icons{grid-column:1;grid-row:auto}footer .footer-legal{gap:20px}.footer-brand{font-size:20px}}
+
+.hero .contact-body>a:not(.button){border-radius:6px;transition:background .18s,box-shadow .18s}
+.hero .contact-body>a:not(.button):hover,.hero .contact-body>a:not(.button):focus-visible{background:#e1e9da;box-shadow:0 0 0 5px #e1e9da;text-decoration:underline;text-underline-offset:3px}
