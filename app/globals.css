@@ -94,6 +94,6 @@
 /* Clear contact actions with comfortable touch targets. */
 .contact-page .contact-link{width:fit-content;max-width:100%;min-height:52px;padding:13px 18px;border:1px solid #203f2b;border-radius:12px;background:var(--green);color:#fff;font-weight:600;font-size:clamp(14px,1.2vw,18px);box-shadow:0 3px 10px #203f2b12;transition:background .2s,box-shadow .2s}
 .contact-page .contact-link:hover{background:#34543b;box-shadow:0 5px 16px #203f2b25}
-.contact-page .contact-link[href^="mailto:"]{background:#e9ede4;color:var(--green);border-color:#bac8b8}
-.contact-page .contact-link[href^="mailto:"]:hover{background:#dce5d5}
+.contact-page .contact-link{background:#e9ede4;color:var(--green);border-color:#bac8b8}
+.contact-page .contact-link:hover{background:#dce5d5}
 @media(max-width:600px){.contact-page .contact-link{padding:12px;gap:8px;font-size:14px}.contact-page .contact-link svg{width:20px;height:20px}}
