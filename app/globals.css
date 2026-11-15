@@ -99,3 +99,12 @@
 @media(max-width:600px){.contact-page .contact-link{padding:12px;gap:8px;font-size:14px}.contact-page .contact-link svg{width:20px;height:20px}}
 
 footer .footer-socials{display:flex;flex-wrap:wrap;gap:14px 22px;margin-top:15px}footer .footer-socials a,footer .footer-socials span{display:inline-flex;align-items:center;gap:7px;color:var(--green)}footer .footer-socials span{color:var(--muted)}footer .footer-socials small{width:auto;font-size:11px}footer .footer-socials a:hover{text-decoration:underline}
+
+/* Footer follows the full-width layout and its shared side margins. */
+footer{max-width:none;margin:0;padding:38px 5.8vw 30px;gap:28px;font-size:16px}
+footer>div>strong{font-size:21px;letter-spacing:-.02em}
+footer .footer-socials{gap:18px 26px;margin-top:20px}
+footer .footer-socials svg{color:#287343;width:22px;height:22px;stroke-width:2}
+footer .footer-socials span svg{color:#287343}
+footer>nav{align-self:flex-start;padding-top:4px}
+@media(max-width:600px){footer{padding:30px 20px 24px;font-size:15px;gap:24px}footer .footer-socials{gap:16px 20px}footer>nav{flex-wrap:wrap}}
