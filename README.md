@@ -34,3 +34,6 @@ The supplied SVG logo is copied unchanged. A separate original portrait was not 
 ## Before launch
 
 Replace example listings, connect Sanity if required, configure verified Resend sending if a form is added, complete legal information, check image rights and original portrait, remove development notices and enable indexing only after approval. Deployment is a separate step.
+
+## Contact form delivery
+The contact form posts to `/api/kontakt` and sends plain-text email via Namecheap Private Email (TLS, port 465), to info@linnarz-immobilien.de. Set server-only Vercel variables `SMTP_USER` and `SMTP_PASSWORD` (Namecheap application password; SMTP access enabled), then redeploy. Never commit credentials. Missing configuration returns 503 and does not claim success. Delivery acceptance and inbox receipt must be tested after configuration. The in-memory abuse limit is best-effort per instance; deployment protection remains enabled for previews.
