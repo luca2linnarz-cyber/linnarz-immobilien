@@ -3,7 +3,6 @@ export default function Datenschutz() {
   return <section className="section page-section prose">
     <h1>Datenschutzerklärung</h1>
     <p>Stand: 15. November 2026</p>
-    <p className="demo-note">Die Angaben zur Verarbeitung von E-Mails werden nach Bestätigung des Postfachanbieters ergänzt.</p>
     <h2>Verantwortlicher</h2>
     <p>Luca Linnarz · Linnarz Immobilien<br/>Schulstraße 32a, 53518 Adenau, Deutschland<br/>Telefon: <a href="tel:+491751165719">+49 175 1165719</a><br/>E-Mail: <a href="mailto:info@linnarz-immobilien.de">info@linnarz-immobilien.de</a></p>
     <h2>Bereitstellung und Sicherheit der Website</h2>
@@ -14,6 +13,8 @@ export default function Datenschutz() {
     <h2>Kontakt per E-Mail oder Telefon</h2>
     <p>Bei einer Kontaktaufnahme verarbeiten wir Ihre Kontaktdaten und den Inhalt Ihrer Anfrage zur Bearbeitung. Grundlage ist Art. 6 Abs. 1 lit. b DSGVO bei Vertragsangelegenheiten und vorvertraglichen Anfragen, ansonsten Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres Interesses, Anfragen zu beantworten. Die Angaben sind freiwillig; ohne erforderliche Kontaktdaten können wir gegebenenfalls nicht antworten.</p>
     <p>Nach Erledigung löschen wir die Daten, sofern keine gesetzlichen Aufbewahrungspflichten oder berechtigten Gründe zur weiteren Speicherung bestehen. Kontaktlinks öffnen Ihr eigenes Telefon- oder E-Mail-Programm; auf dieser Website gibt es kein Kontaktformular.</p>
+    <h2>E-Mail-Dienstleister Namecheap</h2>
+    <p>Unser E-Mail-Postfach wird von Namecheap, Inc. (USA) bereitgestellt. Namecheap verarbeitet für den Empfang, die Speicherung und den Versand von Nachrichten insbesondere Absender- und Empfängeradressen, Nachrichteninhalte, Anhänge sowie technische Verbindungsdaten. Dabei können Unterauftragnehmer eingesetzt und Daten außerhalb der EU beziehungsweise des EWR verarbeitet werden. Die Auftragsverarbeitung und Garantien für internationale Übermittlungen sind im <a href="https://www.namecheap.com/legal/universal/data-processing-addendum/">Data Processing Addendum von Namecheap</a> geregelt. Ergänzende Informationen finden Sie in den <a href="https://www.namecheap.com/legal/general/details-for-specific-products-services/">produktspezifischen Datenschutzhinweisen</a>. Die oben genannten Zwecke, Rechtsgrundlagen und Löschkriterien für Kontaktanfragen gelten auch für die Verarbeitung im Postfach.</p>
     <h2>Bilder, Schriften und Analyse</h2>
     <p>Bilder werden über unser Hosting ausgeliefert. Die Website verwendet Systemschriften, keine extern geladenen Schriftbibliotheken, keine eingebetteten Karten oder Videos und keine Analyse- oder Marketingwerkzeuge. Die Website selbst setzt keine Marketing-Cookies.</p>
     <h2>Ihre Rechte</h2>
