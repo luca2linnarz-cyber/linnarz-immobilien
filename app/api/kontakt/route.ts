@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 export const runtime = 'nodejs';
 export const maxDuration = 30;
-const subjects = ['Immobilienberatung','Verkauf','Vermietung','Bewertung','Baufinanzierung','Sonstiges'];
+const subjects = ['Verkauf','Vermietung','Bewertung','Baufinanzierung','Sonstiges'];
 // Best-effort per-instance abuse guard; deployment protection also remains active.
 const attempts = new Map<string, { count: number; until: number }>();
 export async function POST(request: Request) {

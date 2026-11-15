@@ -24,7 +24,7 @@ export default function ContactForm({ subject }: { subject: string }) {
       <label>Ihr Name<input name="name" autoComplete="name" required maxLength={120}/></label>
       <label>E-Mail-Adresse<input name="email" type="email" autoComplete="email" required maxLength={254}/></label>
       <label>Telefonnummer<input name="phone" type="tel" autoComplete="tel" required minLength={6} maxLength={40}/></label>
-      <label>Ihr Anliegen<select name="subject" defaultValue={subject} required>{['Immobilienberatung','Verkauf','Vermietung','Bewertung','Baufinanzierung','Sonstiges'].map(s=><option key={s}>{s}</option>)}</select></label>
+      <label>Ihr Anliegen<select name="subject" defaultValue={subject} required>{['Verkauf','Vermietung','Bewertung','Baufinanzierung','Sonstiges'].map(s=><option key={s}>{s}</option>)}</select></label>
       <label className="full-width">Ihre Nachricht<textarea name="message" required minLength={10} maxLength={5000} rows={6}/></label>
       <div className="form-trap" aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off"/></label></div>
       <p className="full-width form-privacy">Wir verwenden Ihre Angaben zur Bearbeitung Ihrer Anfrage und zur Kontaktaufnahme. Weitere Informationen finden Sie in unserer <Link href="/datenschutz">Datenschutzerklärung</Link>.</p>
