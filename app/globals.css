@@ -124,3 +124,9 @@ footer>nav{align-self:flex-start;padding-top:4px}
 .financing-benefits h2{font:600 22px/1.3 Arial,sans-serif;letter-spacing:-.02em;margin-bottom:14px}
 .financing-benefits p{margin-bottom:0}
 @media(max-width:800px){.financing-page{padding:45px 24px}.financing-benefits{grid-template-columns:1fr;gap:18px;margin-top:40px}.financing-cta{padding:20px 23px;gap:18px;max-width:100%}}
+
+/* Framed footer icons remain distinct from the adjacent labels. */
+footer .footer-socials svg{box-sizing:content-box;width:26px;height:26px;padding:10px;border:2px solid #287343;border-radius:13px;background:#e9ede4;flex-shrink:0;stroke-width:2}
+footer .footer-socials a,footer .footer-socials span{gap:10px}
+footer .footer-socials a:hover svg{background:#dce5d5;border-color:var(--green)}
+@media(max-width:600px){footer .footer-socials svg{width:24px;height:24px;padding:9px}}
