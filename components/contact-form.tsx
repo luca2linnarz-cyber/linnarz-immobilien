@@ -7,7 +7,7 @@ export default function ContactForm({ subject }: { subject: string }) {
   const [busy, setBusy] = useState(false);
   const [sent, setSent] = useState(false);
   return <section className="section inquiry-section" aria-labelledby="inquiry-title">
-    <p className="eyebrow">Ihre Anfrage</p><h2 id="inquiry-title">Wie können wir Ihnen helfen?</h2>
+    <p className="eyebrow">Ihre Anfrage</p><h2 id="inquiry-title">Ihre Nachricht an mich</h2>
     <p>Schildern Sie uns Ihr Anliegen. Wir melden uns persönlich bei Ihnen. Alle Felder sind Pflichtfelder.</p>
     <form className="inquiry-form" onSubmit={async e => {
       e.preventDefault(); if (busy) return;
