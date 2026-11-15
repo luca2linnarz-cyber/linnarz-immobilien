@@ -87,3 +87,6 @@
  .contact-portrait-original{align-self:stretch;aspect-ratio:auto;margin-top:0;height:auto;min-height:0}
 }
 @media(max-width:800px){.contact-portrait-original{aspect-ratio: .78;max-width:440px;justify-self:center}}
+
+/* Contact height follows its copy, never the viewport height. */
+.contact-page{min-height:0}
