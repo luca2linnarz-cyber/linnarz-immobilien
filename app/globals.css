@@ -43,3 +43,25 @@
   .valuation p { font-size: 1.3vw; margin-bottom: 1.5vw; }
   .valuation .button { font-size: 1.1vw; padding: 1.1vw 2vw; }
 }
+
+/* The source portrait already contains the overhanging head. Reveal that
+   silhouette with a CSS clip instead of regenerating the person's face. */
+.hero .contact-card { overflow: visible; }
+.portrait-frame { position: relative; height: 240px; }
+.portrait-frame .portrait {
+  position: absolute; bottom: 0; width: 100%; height: calc(100% + 14px);
+  object-fit: fill;
+  clip-path: polygon(0 13%,1% 9%,3% 7%,6% 6.03%,40.3% 6.03%,41.9% 3%,46.4% .5%,51.6% 0,56% 1.5%,60% 5%,61% 6.03%,94% 6.03%,97% 7%,99% 9%,100% 13%,100% 100%,0 100%);
+  border-radius: 0 0 18px 18px;
+}
+@media (min-width: 901px) {
+  .hero { position: relative; }
+  .hero-copy > .button { position: absolute; top: 25.3vw; left: 7.25vw; }
+  .portrait-frame { height: 15.6vw; }
+  .portrait-frame .portrait { height: calc(100% + 1vw); border-radius: 0 0 1.5vw 1.5vw; }
+}
+@media (min-width: 601px) and (max-width: 800px) { .portrait-frame { height: 210px; } }
+@media (max-width: 600px) {
+  .portrait-frame { height: 100%; min-height: 205px; }
+  .portrait-frame .portrait { min-height: 0; object-fit: cover; object-position: 52% center; border-radius: 16px 0 0 16px; clip-path: none; height: 100%; }
+}
