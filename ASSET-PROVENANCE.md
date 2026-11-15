@@ -11,3 +11,6 @@
 
 ## Portrait update
 The home and contact pages now use `luca-portrait.webp`, derived from the owner's supplied 5154×3436 transparent original photograph. Cropped to the upper body and optimized to 1400 pixels wide, with metadata removed. No generative changes to the person. The previous screenshot portrait is no longer displayed.
+
+## Enhanced hero background
+The displayed hero-castle-hd.webp is an AI-assisted high-resolution reconstruction of hero-castle.png requested by the owner. Fine castle and forest details are reconstructed, not pixel-identical to the source. The original hero-castle.png remains retained. Generated resolution: 2092 × 752.
