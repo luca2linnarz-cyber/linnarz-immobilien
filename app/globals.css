@@ -65,3 +65,12 @@
   .portrait-frame { height: 100%; min-height: 205px; }
   .portrait-frame .portrait { min-height: 0; object-fit: cover; object-position: 52% center; border-radius: 16px 0 0 16px; clip-path: none; height: 100%; }
 }
+
+/* The original transparent photograph sits above a separate rounded backdrop. */
+.portrait-original{isolation:isolate;position:relative;background:transparent;overflow:visible}
+.portrait-original::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:22px 22px 16px 16px;background:linear-gradient(120deg,#e2dccf,#b9b4a8)}
+.portrait-original>img{position:absolute;inset:auto 0 0;width:100%;height:calc(100% + 22px);object-fit:cover;object-position:center top;border-radius:0 0 16px 16px}
+.contact-portrait-original{width:100%;height:auto;aspect-ratio:1.14;margin-top:40px;align-self:center}
+.contact-portrait-original>img{height:calc(100% + 32px)}
+@media(min-width:901px){.hero .portrait-original>img{height:calc(100% + 1.4vw)}}
+@media(max-width:600px){.hero .portrait-original{min-height:205px}.hero .portrait-original>img{height:calc(100% + 18px);object-position:54% top}.contact-portrait-original{min-height:0;margin-top:30px}}

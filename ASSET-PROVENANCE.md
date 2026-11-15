@@ -8,3 +8,6 @@
 - Portrait: source screenshot crop; standalone original portrait unavailable in the accessible attachments.
 - Listing/valuation images: source screenshot crops, demonstration use only.
 - No third-party stock imagery was fetched.
+
+## Portrait update
+The home and contact pages now use `luca-portrait.webp`, derived from the owner's supplied 5154×3436 transparent original photograph. Cropped to the upper body and optimized to 1400 pixels wide, with metadata removed. No generative changes to the person. The previous screenshot portrait is no longer displayed.
