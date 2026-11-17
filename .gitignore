@@ -8,3 +8,7 @@ reference/
 
 .vercel/
 .vercel
+
+# Local screenshots and Supabase CLI metadata
+output/
+supabase/.temp/
