@@ -196,9 +196,10 @@ footer .footer-note{grid-column:1/-1;width:auto;margin:0;padding-top:20px;border
 .editor-toolbar span{font-size:14px;color:var(--muted)}.admin-editor[hidden]{display:none}.admin-page>.property-detail{padding:24px 0;min-height:0}.navigation .admin-shortcut{color:var(--green);border-bottom:2px solid #b4c6aa}
 @media(max-width:600px){.editor-toolbar{flex-direction:column;align-items:flex-start;gap:10px;padding:14px}.admin-page>.property-detail .property-detail-grid{grid-template-columns:1fr}}
 
-/* A compact portrait sits beside the identity, leaving contact links full width. */
-.object-agent-body{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:22px}
-.object-agent-copy{min-width:0}.object-agent-copy strong{font-size:18px}.object-agent-copy p{margin:4px 0 0}
-.object-contact-portrait{position:relative;flex:0 0 88px;width:88px;height:88px;border-radius:50%;overflow:hidden;background:#d8d2c5;border:1px solid #b9c6b4}
-.object-contact-portrait>img{object-fit:cover;object-position:center top;transform:scale(1.55);transform-origin:50% 8%}
-.object-agent>a svg{flex-shrink:0}
+/* A generous rectangular portrait balances the agent's contact details. */
+.object-agent{container-type:inline-size}.object-agent-body{display:grid;grid-template-columns:minmax(0,1fr) 35%;align-items:stretch;gap:18px;min-height:160px}
+.object-agent-copy{min-width:0;display:flex;flex-direction:column;align-items:flex-start}.object-agent-copy strong{font-size:18px}.object-agent-copy p{margin:4px 0 auto;padding-bottom:16px}
+.object-agent-copy a{display:flex;align-items:center;gap:8px;color:var(--green);margin-top:14px;font-size:16px;overflow-wrap:anywhere}.object-agent-copy svg{flex-shrink:0}
+.object-contact-portrait{position:relative;min-width:0;border-radius:14px;overflow:hidden;background:#d8d2c5}
+.object-contact-portrait>img{object-fit:cover;object-position:center top;transform:scale(1.08);transform-origin:center top}
+@container (max-width:280px){.object-agent-body{gap:12px;grid-template-columns:minmax(0,1fr) 34%}.object-agent-copy a{font-size:12px;gap:5px}}
