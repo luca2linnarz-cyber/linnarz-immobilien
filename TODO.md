@@ -12,8 +12,8 @@
 - [x] Objektbezug im Kontaktformular und in der Anfrage-E-Mail.
 - [x] Geschützte Bearbeitungsmaske und serverseitiger Bild-Upload vorbereitet.
 - [x] RLS-Regeln lokal gegen Besucher, fremde Konten und Administrator geprüft.
-- [ ] Supabase-Projekt verbinden, Migration anwenden, Sicherheitsberater ausführen.
+- [x] Supabase-Projekt verbinden, Migrationen anwenden, Sicherheitsberater ausführen (keine Sicherheitsbefunde).
 - [ ] Administrator freischalten und Anmeldung/Upload/Speichern am echten Projekt testen.
-- [ ] Datenschutzhinweise vor Aktivierung um Supabase ergänzen.
+- [x] Datenschutzhinweise um Supabase-Verwaltung und Bildauslieferung ergänzen.
 - [ ] Mit Lucas Testbildern ein Angebot als Entwurf anlegen und vollständig abnehmen.
 Siehe `supabase/SETUP.md` für Einrichtung und Grenzen der ersten Fassung.

@@ -2,11 +2,11 @@
 
 ## Projekt verbinden
 
-Ein separates Supabase-Projekt in Frankfurt verwenden, Data API aktivieren, automatische Tabellenfreigabe deaktivieren und automatische RLS aktivieren. Keine echten Eigentümer- oder Interessentendaten für die Einrichtung verwenden.
+Das separate Supabase-Projekt `oqpfqewjaiznbvmkkhsn` liegt in der EU-Region Irland (`eu-west-1`). Data API aktivieren, automatische Tabellenfreigabe deaktivieren und automatische RLS aktivieren. Keine echten Eigentümer- oder Interessentendaten für die Einrichtung verwenden.
 
-Die Migration in `migrations/20261117162839_property_catalog.sql` ist vorbereitet. Erst im vorgesehenen Supabase-Projekt anwenden. Anschließend die Supabase-Sicherheitsberater ausführen und die Zugriffstests gegen das echte Projekt wiederholen.
+Die Migrationen `property_catalog`, `harden_catalog_access` und `optimize_catalog_policies` sind im vorgesehenen Projekt angewendet. Die Sicherheitsberater melden keine offenen Sicherheitsbefunde. Anonyme und fremde Rollen wurden gegen das gehostete Postgres sowie die öffentliche Data API geprüft.
 
-In Vercel (Preview und später Production) setzen:
+In Vercel sind Preview und Development verbunden. Production bleibt bis zur Freigabe offen:
 
 - `NEXT_PUBLIC_SUPABASE_URL`: Projekt-URL
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`: Publishable Key, niemals Secret oder service_role
@@ -40,4 +40,4 @@ Die Anmeldung liegt unter `/verwaltung/anmelden`. RLS und eine zusätzliche serv
 6. Session erneuern, abmelden, direkte Bearbeitungs-/Uploadaufrufe ohne Sitzung abweisen.
 7. Datenschutzhinweise vor Aktivierung um Supabase Auth und Bildauslieferung ergänzen; DPA und Region prüfen.
 
-Bereits lokal geprüft: Produktionsbuild, Typprüfung, Feldvalidierung, RLS-Migration in einer isolierten PostgreSQL-Testumgebung, Galerie-Vollbild und objektbezogenes Kontaktformular. Gehostete Anmeldung, Storage und endgültige Datenbankabnahme bleiben ohne Projektzugriff offen.
+Bereits lokal geprüft: Produktionsbuild, Typprüfung, Feldvalidierung, RLS-Migration in einer isolierten PostgreSQL-Testumgebung, Galerie-Vollbild und objektbezogenes Kontaktformular. Die gehostete Datenbank und die öffentliche Data API sind geprüft. Gehostete Anmeldung, tatsächlicher Upload und vollständige Entwurfsabnahme benötigen noch das von Luca anzulegende Administratorkonto. Das Testangebot TEST-001 ist als unveröffentlichter Entwurf angelegt.
