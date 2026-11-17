@@ -17,7 +17,7 @@ Es wird kein service_role-Schlüssel benötigt.
 
 Öffentliche Registrierung und anonyme Anmeldung in Supabase Auth deaktivieren. Für Luca ein bestätigtes Auth-Konto anlegen bzw. einladen. Nur die UUID dieses Kontos wird über eine privilegierte Verwaltungsverbindung in `public.catalog_admins(user_id)` eingetragen. Kein Besucher und kein normal angemeldeter Nutzer darf diese Tabelle verändern. Zugangspasswort nur im Supabase-Dashboard eingeben, niemals im Chat oder Repository.
 
-Die Anmeldung liegt unter `/verwaltung/anmelden`. RLS und eine zusätzliche serverseitige Adminprüfung schützen Entwürfe, Uploads und Bearbeitungen. Zugang nur mit gültigem Supabase-Konto UND Adminmitgliedschaft. Die Cookie-Erneuerung erfolgt im Next-Proxy. Keine Cookies, Tokens oder Kundendaten in Logs schreiben.
+Die Anmeldung liegt unter `/verwaltung/anmelden`; `/verwaltung` leitet dorthin weiter. Für Besucher gibt es keinen Menülink. Nur angemeldete Administratoren sehen „Verwaltung“ in der Navigation. RLS und eine zusätzliche serverseitige Adminprüfung schützen Entwürfe, Uploads und Bearbeitungen. Zugang nur mit gültigem Supabase-Konto UND Adminmitgliedschaft. Die Cookie-Erneuerung erfolgt im Next-Proxy. Keine Cookies, Tokens oder Kundendaten in Logs schreiben.
 
 ## Daten und Medien
 
@@ -33,7 +33,7 @@ Die Anmeldung liegt unter `/verwaltung/anmelden`. RLS und eine zusätzliche serv
 ## Noch erforderliche Abnahme am verbundenen Projekt
 
 1. Anonyme und fremde angemeldete Nutzer können keine Entwürfe oder Entwurfsbilder lesen und nichts bearbeiten.
-2. Admin anmelden, Entwurf anlegen, fünf Testbilder und einen Grundriss hochladen, Reihenfolge speichern, Vorschau prüfen.
+2. Admin anmelden, neue Immobilie öffnen, ohne vorheriges Speichern fünf Testbilder und einen Grundriss hochladen. Ein privater Entwurf wird beim ersten Upload automatisch angelegt. Aktuelle ungespeicherte Texte und Bilder über „Vorschau öffnen“ prüfen, zurückwechseln, Reihenfolge und Angaben speichern.
 3. Als Testangebot veröffentlichen; auf Start-, Übersichts- und Detailseite prüfen. Änderung speichern und erneut laden.
 4. Veröffentlichung zurücknehmen und öffentliches Angebot sowie Bildzugriff nach Ablauf vorheriger Links prüfen.
 5. Objektbezogene Testanfrage senden und Objektnummer/Titel sowie Reply-To im Postfach prüfen.

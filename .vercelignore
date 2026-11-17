@@ -5,3 +5,5 @@ reference
 .env*
 *.tsbuildinfo
 scripts/commit-local.mjs
+
+output/
