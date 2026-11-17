@@ -197,6 +197,7 @@ footer .footer-note{grid-column:1/-1;width:auto;margin:0;padding-top:20px;border
 @media(max-width:600px){.editor-toolbar{flex-direction:column;align-items:flex-start;gap:10px;padding:14px}.admin-page>.property-detail .property-detail-grid{grid-template-columns:1fr}}
 
 /* Reuse the home portrait at the sidebar scale, independent of viewport sizing. */
-.object-contact-portrait{width:100%;max-width:260px;margin:30px auto 22px}
+.object-agent{container-type:inline-size}.object-agent-body{display:grid;grid-template-columns:minmax(0,1fr) 28%;gap:16px;align-items:center}.object-agent-copy{min-width:0}.object-agent-copy p{margin-bottom:0}.object-agent-copy a{display:flex;align-items:center;gap:10px;color:var(--green);margin-top:14px;white-space:nowrap}.object-agent-copy svg{flex-shrink:0}.object-contact-portrait{width:100%;max-width:120px;margin:10px 0 0;justify-self:end}
 .object-contact-portrait .portrait-frame{width:100%;height:auto;min-height:0;aspect-ratio:4/3}
-.object-contact-portrait .portrait-original>img{height:calc(100% + 18px);object-position:center top}
+.object-contact-portrait .portrait-original>img{height:calc(100% + 9px);object-position:center top}
+@container (max-width:300px){.object-agent-body{gap:12px;grid-template-columns:minmax(0,1fr) 72px}.object-agent-copy a{font-size:13px;gap:6px}}

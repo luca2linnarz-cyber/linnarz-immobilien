@@ -20,7 +20,11 @@ export async function loadCatalog(db: SupabaseClient, admin=false): Promise<Prop
   }));
 }
 export const getProperties=cache(async():Promise<Property[]>=>{
+  const demoProperties:Property[]=examples.map((p,i)=>({...p,id:`demo-${i}`,reference:`DEMO-00${i+1}`,priceAmount:null,type:p.type as 'Kauf'|'Miete',status:'Verfügbar',published:true,demo:true,details:{objectType:i===1?'Wohnung':'Haus',...(p.title.includes('Adenau')?{city:'Adenau'}:{}),...(p.extra.includes('Grundstück')?{plotArea:p.extra.replace(' m² Grundstück','')}:{} )},equipment:'',location:'',media:[{id:`photo-${i}`,path:p.image,label:p.title,kind:'photo',url:p.image}]}));
   const db=publicDatabase();
-  if(!db) return examples.map((p,i)=>({...p,id:`demo-${i}`,reference:`DEMO-00${i+1}`,priceAmount:null,type:p.type as 'Kauf'|'Miete',status:'Verfügbar',published:true,demo:true,details:{objectType:i===1?'Wohnung':'Haus',...(p.title.includes('Adenau')?{city:'Adenau'}:{}),...(p.extra.includes('Grundstück')?{plotArea:p.extra.replace(' m² Grundstück','')}:{} )},equipment:'',location:'',media:[{id:`photo-${i}`,path:p.image,label:p.title,kind:'photo',url:p.image}]}));
-  return loadCatalog(db);
+  if(!db) return demoProperties;
+  const published=await loadCatalog(db);
+  // Keep the approved example listings visible alongside the connected catalog.
+  const slugs=new Set(published.map(p=>p.slug));
+  return [...published,...demoProperties.filter(p=>!slugs.has(p.slug))];
 });
